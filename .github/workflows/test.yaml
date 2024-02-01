@@ -19,9 +19,9 @@ jobs:
   Test-deploy:
 
     runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          platform: [dev, perf]
+    strategy:
+      matrix:
+        latform: [dev, perf]
     env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
       PLATFORM_ID: ${{ matrix.platform }}

@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
-      PLATFORM_ID: ${{ github.event.inputs.platform_id || ${{ matrix.platform }} }}
+      PLATFORM_ID: ${{ github.event.inputs.platform_id || matrix.platform }}
     
     steps:
       - name: 🎯 Checkout Code

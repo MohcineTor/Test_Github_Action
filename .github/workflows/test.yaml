@@ -23,7 +23,7 @@ on:
           - 'staging'
   push:
     branches:
-      - master
+      - main
 jobs:
   Test-deploy:
     strategy:

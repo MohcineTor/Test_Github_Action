@@ -1,0 +1,42 @@
+
+name: Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      context_id:
+        description: 'Select CONTEXT_ID'
+        required: true
+        default: 'app1'
+        type: string
+        enum:
+          - 'app1'
+          - 'performance_dev'
+      platform_id:
+        description: 'Select PLATFORM_ID'
+        required: true
+        default: 'dev'
+        type: string
+        enum:
+          - 'dev'
+          - 'perf'
+          - 'staging'
+  push:
+    branches:
+      - master
+jobs:
+  Test-deploy:
+    strategy:
+      matrix:
+        platform: [dev, perf]
+    runs-on: ubuntu-latest
+    env:
+      CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
+      PLATFORM_ID: ${{ github.event.inputs.platform_id || ${{ matrix.platform }} }}
+    
+    steps:
+      - name: 🎯 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🛠 test workflows
+        uses: MohcineTor/Github_Actions/.github/actions/test

@@ -20,6 +20,7 @@ jobs:
     strategy:
       matrix:
         platform: [dev, perf]
+        version: [10, 12, 14]
     runs-on: ubuntu-latest
     env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
@@ -31,9 +32,11 @@ jobs:
 
       - name: 🛠 test workflows
         uses: MohcineTor/Github_Actions/.github/actions/test@main
-        strategy:
-          matrix:
-            platforms: [dev, perf]
+
+      - uses: MohcineTor/Github_Actions/.github/actions/test1@main
+        with:
+          node-version: ${{ matrix.version }}
+
 
           
       

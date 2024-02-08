@@ -31,6 +31,9 @@ jobs:
 
       - name: 🛠 test workflows
         uses: MohcineTor/Github_Actions/.github/actions/test@main
-        with:  
-          platforms: "dev,perf"
+        strategy:
+          matrix:
+            platforms: [dev, perf]
+
+          
       

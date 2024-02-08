@@ -34,7 +34,7 @@ jobs:
 
       - uses: MohcineTor/Github_Actions/.github/actions/test1@main
         with:
-          node-version: ${{ matrix.version }}
+          node-version: ${{ matrix.node-version }}
 
 
           

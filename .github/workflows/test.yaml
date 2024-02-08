@@ -32,5 +32,5 @@ jobs:
       - name: 🛠 test workflows
         uses: MohcineTor/Github_Actions/.github/actions/test@main
         with:  
-          platforms: ${{ toJson(matrix.platform) }}
+          platforms: "dev,perf"
       

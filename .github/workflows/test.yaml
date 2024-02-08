@@ -19,12 +19,11 @@ jobs:
   Test-deploy:
     strategy:
       matrix:
-        platform: [dev, perf]
-        version: [10, 12, 14]
+        node-version: [dev, perf]
     runs-on: ubuntu-latest
     env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
-      PLATFORM_ID: ${{ matrix.platform }}
+      PLATFORM_ID: dev
     
     steps:
       - name: 🎯 Checkout Code

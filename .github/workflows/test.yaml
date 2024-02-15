@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [dev, perf]
+        platform: [dev, perf]
     env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
       PLATFORM_ID: ${{ matrix.platform }}

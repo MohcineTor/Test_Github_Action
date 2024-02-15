@@ -21,9 +21,8 @@ jobs:
       matrix:
         node-version: [dev, perf]
     runs-on: ubuntu-latest
-    env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
-      PLATFORM_ID: dev
+      PLATFORM_ID: ${{ matrix.platform }}
     
     steps:
       - name: 🎯 Checkout Code
@@ -32,9 +31,11 @@ jobs:
       - name: 🛠 test workflows
         uses: MohcineTor/Github_Actions/.github/actions/test@main
 
-      - uses: MohcineTor/Github_Actions/.github/actions/test1@main
+      - uses: MohcineTor/Github_Actions/.github/actions/pull@main
         with:
-          node-version: ${{ matrix.node-version }}
+          platforms: "dev,perf"
+          simulator_image_docker_orlistofImage: simulator_simulator, simu
+          simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, asset_v12
 
 
           

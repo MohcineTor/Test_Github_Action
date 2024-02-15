@@ -17,10 +17,11 @@ on:
       - main
 jobs:
   Test-deploy:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [dev, perf]
-    runs-on: ubuntu-latest
+    env:
       CONTEXT_ID: ${{ github.event.inputs.context_id || 'performance_dev' }}
       PLATFORM_ID: ${{ matrix.platform }}
     

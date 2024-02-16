@@ -32,16 +32,16 @@ jobs:
       - name: 🛠 test workflows
         uses: MohcineTor/Github_Actions/.github/actions/test@main
 
-      - uses: MohcineTor/Github_Actions/.github/actions/pull@main
+      - uses: MohcineTor/Github_Actions/.github/actions/pullv1@main
         with:
           platforms: "dev,perf"
           simulator_image_docker_orlistofImage: simulator_simulator, simu
           simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, asset_v12
 
-      - uses: MohcineTor/Github_Actions/.github/actions/push@main
-        with:
-          platforms: "dev,perf"
-          simulator_image_docker_orlistofImage: simulator_simulator, simu
-          simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, asset_v12
+      # - uses: MohcineTor/Github_Actions/.github/actions/push@main
+      #   with:
+      #     platforms: "dev,perf"
+      #     simulator_image_docker_orlistofImage: simulator_simulator, simu
+      #     simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, asset_v12
           
       

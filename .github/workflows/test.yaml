@@ -30,14 +30,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name : 📥 Pull Image from ACR
-      - uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
+        uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
         with:
           platforms: "dev,perf"
           simulator_image_docker_orlistofImage: simulator_simulator, asset_simulators
           simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, ASSET_v14.2.0_2023-05-30-10h25-06Z
      
       - name : 🐳 Push Image to ACR
-      - uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
+        uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
         with:
           platforms: "dev,perf"
           simulator_image_docker_orlistofImage: simulator_simulator, simu

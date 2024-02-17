@@ -39,7 +39,7 @@ jobs:
       - name : 🐳 Push Image to ACR
         uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
         with:
-          platform_or_listofPlatforms: "dev,perf"
+          platform_or_listofPlatforms: "dev"
           simulator_image_docker_or_listofImages: nginx
           simulator_version_or_listofVersions: 1.25.4-alpine-slim
           

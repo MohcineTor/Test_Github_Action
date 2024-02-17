@@ -41,6 +41,6 @@ jobs:
         with:
           platforms: "dev,perf"
           simulator_image_docker_orlistofImage: simulator_simulator, nginx
-          simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, latest
+          simulator_version_orlistofversion: ASSET_v14.2.1_2023-10-26-15h23-27Z, latest, 1.25.4-alpine-slim
           
       

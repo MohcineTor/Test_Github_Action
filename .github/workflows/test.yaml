@@ -40,8 +40,8 @@ jobs:
         uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
         with:
           platform_or_listofPlatforms: "dev, perf"
-          simulator_image_docker_or_listofImages: "nginx"
-          simulator_version_or_listofVersions: "1.24.0-perl, 1.25.4-alpine-slim"
-          tags_or_list_of_tags: "[Nginx_1.24.0], [Nginx_1.25.4]"
+          simulator_image_docker_or_listofImages: "nginx, redis"
+          simulator_version_or_listofVersions: "1.25.4-alpine-slim, 7.0.15-alpine"
+          tags_or_list_of_tags: "[Nginx_1.24.0], [Redis_7.0.15]"
           
       

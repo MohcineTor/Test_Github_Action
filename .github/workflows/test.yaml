@@ -1,5 +1,5 @@
 
-name: Push_Pull
+name: Push_Pull_latest
 
 on:
   workflow_dispatch:

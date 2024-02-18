@@ -1,5 +1,5 @@
 
-name: Push_Pull_latest
+name: Push_Pulltag_latest
 
 on:
   workflow_dispatch:

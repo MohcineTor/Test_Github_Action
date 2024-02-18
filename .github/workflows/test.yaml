@@ -42,6 +42,6 @@ jobs:
           platform_or_listofPlatforms: "dev, perf"
           simulator_image_docker_or_listofImages: "nginx"
           simulator_version_or_listofVersions: "alpine3.18-slim, 1.25.4-alpine-slim"
-          tags_or_list_of_tags: "[Nginx_3.18], [Nginx_1.25.4]"
+          tags_or_list_of_tags: "[Nginx_3.18.1], [Nginx_1.25.4]"
           
       

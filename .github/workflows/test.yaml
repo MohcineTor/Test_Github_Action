@@ -1,5 +1,5 @@
 
-name: Test
+name: Push_Pull
 
 on:
   workflow_dispatch:

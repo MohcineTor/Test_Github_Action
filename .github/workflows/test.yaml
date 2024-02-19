@@ -31,7 +31,7 @@ jobs:
       - name : 📥 Pull Image from ACR
         uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
         with:
-          platform_or_list_of_Platforms: "dev, perf, staging"
+          platform_or_list_of_Platforms: "dev,perf,staging"
           simulator_image_docker_or_list_of_Images: "nginx, redis"
           simulator_version_or_list_of_Versions: "1.25.4-alpine-slim, 7.0.15-alpine, 7.2.4"
           tag_or_list_of_tags: "Nginx_1.24.0, Redis_7.0.15, Redis_7.2.4"

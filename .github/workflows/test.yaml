@@ -58,7 +58,7 @@ jobs:
         with:
           platform_or_list_of_Platforms: "dev, perf, staging"
           simulator_image_docker_or_list_of_Images: "nginx, redis"
-          tag_or_list_of_tags: "Nginx_1.24.0, Redis_7.0.15, Redis_7.2.4"
+          tag_or_list_of_tags: "Nginx_1.25.4, Redis_7.0.15, Redis_7.2.4"
       
 
           

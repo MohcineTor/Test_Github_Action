@@ -32,8 +32,8 @@ jobs:
         uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
         with:
           platform_or_listofPlatforms: "dev, perf"
-          simulator_image_docker_or_listofImages: "nginx, redis"
-          simulator_version_or_listofVersions: "1.25.4-alpine-slim, 7.0.15-alpine, 7.2.4"
+          simulator_image_docker_or_listofImages: "simulator_simulator, asset_simulators,nginx, redis"
+          simulator_version_or_listofVersions: "ASSET_v14.2.1_2023-10-26-15h23-27Z, ASSET_14_2024-02-08-14h07_, ASSET_v14.2.0_2023-05-30-10h25-06Z,1.25.4-alpine-slim, 7.0.15-alpine, 7.2.4"
      
       # - name : 🐳 Push Image to ACR
       #   uses: MohcineTor/Github_Actions/.github/actions/push_latest@main

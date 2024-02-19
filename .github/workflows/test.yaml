@@ -33,7 +33,7 @@ jobs:
         with:
           platform_or_listofPlatforms: "dev, perf"
           simulator_image_docker_or_listofImages: "simulator_simulator, nginx, redis"
-          simulator_version_or_listofVersions: "ASSET_v14.2.1_2023-10-26-15h23-27Z, ASSET_v14.2.0_2023-05-30-10h25-06Z"
+          simulator_version_or_listofVersions: "ASSET_v14.2.1_2023-10-26-15h23-27Z, 1.25.4-alpine-slim, 7.0.15-alpine, 7.2.4"
           tags_or_list_of_tags: "Nginx_1.24.0, Redis_7.0.15, Redis_7.2.4"
      
       - name : 🐳 Push Image to ACR

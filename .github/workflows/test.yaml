@@ -38,7 +38,7 @@ jobs:
           tag_or_list_of_tags: "Nginx_1.24.0"
      
       - name : 🐳 Push Image to ACR
-        if: ${{ contains(PLATFORM_ID, dev) }}
+        if: ${{ contains(env.PLATFORM_ID, dev) }}
         uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
         with:
           platform_or_list_of_Platforms: "dev"

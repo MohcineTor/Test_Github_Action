@@ -39,9 +39,9 @@ jobs:
       - name : 🐳 Push Image to ACR
         uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
         with:
-          platform_or_listofPlatforms: "dev, perf, staging"
-          simulator_image_docker_or_listofImages: "nginx, redis"
-          tags_or_list_of_tags: "Nginx_1.24.0, Redis_7.0.15, Redis_7.2.4"
+          platform_or_list_of_Platforms: "dev, perf, staging"
+          simulator_image_docker_or_list_of_Images: "nginx, redis"
+          tag_or_list_of_tags: "Nginx_1.24.0, Redis_7.0.15, Redis_7.2.4"
       
 
           

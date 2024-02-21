@@ -7,5 +7,5 @@
                                   • simulator_simulator: ['ASSET_v14.2.1_2023-10-26-15h23-27Z', 'ASSET_14_2024-02-08-14h07_', 'ASSET_14.2.2']                                                                      
                                   • supplychain_simulator: ['latest', '5.2.2', '5.1.0-onlinestats2', '5.0.1-sa1by1', '5.0.1', '0.4.110', '0.4.108-fastload', '0.0.101']      
                                   • nginx: ['1.25.4-alpine-slim']    
-                                  • redis: ['7.0.15-alpine, 7.2.4']                                     
+                                  • redis: ['7.0.15-alpine, 7.2.4, 6.2.14-alpine']                           
 [2024/02/15 - 15:24:17] INFO     list - Total elapsed time: 0:00:04.886526         

@@ -1,5 +1,5 @@
 
-name: Push_Pulltag
+name: Push_Pull_tag
 on:
   workflow_dispatch:
     inputs:
@@ -45,37 +45,37 @@ jobs:
       #     simulator_image_docker_or_list_of_Images: "redis"
       #     tag_or_list_of_tags: "Redis_7.0.15"
       
-      - name : 📥 Pull Image from ACR
-        if: ${{ contains(env.PLATFORM_ID, 'dev') }}
-        uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
-        with:
-          platform_or_list_of_Platforms: "dev"
-          simulator_image_docker_or_list_of_Images: "redis"
-          simulator_version_or_list_of_Versions: "7.0.15-alpine"
-          tag_or_list_of_tags: "Redis_7.0.15"
-     
-      - name : 🐳 Push Image to ACR
-        if: ${{ contains(env.PLATFORM_ID, 'dev') }}
-        uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
-        with:
-          platform_or_list_of_Platforms: "dev, perf, staging"
-          simulator_image_docker_or_list_of_Images: "redis"
-          tag_or_list_of_tags: "Redis_7.0.15"
-
       # - name : 📥 Pull Image from ACR
+      #   if: ${{ contains(env.PLATFORM_ID, 'dev') }}
       #   uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
       #   with:
-      #     platform_or_list_of_Platforms: "dev, perf, staging"
-      #     simulator_image_docker_or_list_of_Images: "nginx, redis"
-      #     simulator_version_or_list_of_Versions: "1.25.4-alpine-slim, 7.0.15-alpine, 7.2.4"
-      #     tag_or_list_of_tags: "Nginx_1.25.4, Redis_7.0.15, Redis_7.2.4"
+      #     platform_or_list_of_Platforms: "dev"
+      #     simulator_image_docker_or_list_of_Images: "redis"
+      #     simulator_version_or_list_of_Versions: "7.0.15-alpine"
+      #     tag_or_list_of_tags: "Redis_7.0.15"
      
       # - name : 🐳 Push Image to ACR
+      #   if: ${{ contains(env.PLATFORM_ID, 'dev') }}
       #   uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
       #   with:
       #     platform_or_list_of_Platforms: "dev, perf, staging"
-      #     simulator_image_docker_or_list_of_Images: "nginx, redis"
-      #     tag_or_list_of_tags: "Nginx_1.25.4, Redis_7.0.15, Redis_7.2.4"
+      #     simulator_image_docker_or_list_of_Images: "redis"
+      #     tag_or_list_of_tags: "Redis_7.0.15"
+
+      - name : 📥 Pull Image from ACR
+        uses: MohcineTor/Github_Actions/.github/actions/pull_latest@main
+        with:
+          platform_or_list_of_Platforms: "dev, perf, staging"
+          simulator_image_docker_or_list_of_Images: "nginx, redis"
+          simulator_version_or_list_of_Versions: "1.25.4-alpine-slim, 7.0.15-alpine, 7.2.4, 6.2.14-alpine"
+          tag_or_list_of_tags: "Nginx_1.25.4, Redis_7.0.15, Redis_7.2.4, Redis_6.2.14"
+     
+      - name : 🐳 Push Image to ACR
+        uses: MohcineTor/Github_Actions/.github/actions/push_latest@main
+        with:
+          platform_or_list_of_Platforms: "dev, perf, staging"
+          simulator_image_docker_or_list_of_Images: "nginx, redis"
+          tag_or_list_of_tags: "Nginx_1.25.4, Redis_7.0.15, Redis_7.2.4, Redis_6.2.14"
       
 
           

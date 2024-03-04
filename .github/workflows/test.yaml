@@ -1,5 +1,5 @@
 
-name: Push_Pull_tag Solution 
+name: Push_Pull_tag Solution CI/CD
 on:
   workflow_dispatch:
     inputs:
